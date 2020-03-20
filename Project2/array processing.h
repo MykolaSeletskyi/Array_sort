@@ -11,3 +11,4 @@ void element_search(int* arr, int size);
 void sort_array(int* arr, int size); 
 void average_array(int* arr, int size); 
 void multiples_of_5(int* arr, int size);
+void move_array(int* arr, int size);

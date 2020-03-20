@@ -40,20 +40,19 @@ int main()
 				break;
 			case 54://6
 				multiples_of_5(numbers, size_arr);
-					break;
+				break;
 			case 55://7
-			
-					break;
+				move_array(numbers, size_arr);
+				break;
 			case 56://8
-				
-					break;
+				return 0;
+				break;
 			default:
 				continue;
 			}
 			break;
 		}
 	}
-	
 	random_array(numbers, size_arr);
 	sort_array(numbers, size_arr);
 

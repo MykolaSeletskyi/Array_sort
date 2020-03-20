@@ -14,8 +14,9 @@ void show_array(int* arr, int size) {
 	system("cls");
 	for (int i = 0; i < size; i++)
 	{
-		cout << arr[i] << endl;
+		cout << arr[i]<<" ";
 	}
+	cout << endl;
 	system("pause");
 }
 void element_search(int* arr, int size)
@@ -141,5 +142,36 @@ void multiples_of_5(int* arr, int size)
 	}
 	cout << "Multiples of 5 = " << count << endl;
 	system("pause");
+}
+
+void move_array(int* arr, int size)
+{	
+	system("cls");
+	int number_of_feats=0;
+	cout << "number feats = ";
+	cin >> number_of_feats;
+	system("cls");
+	cout << "1) ->Right" << endl;
+	cout << "2) <-Left" << endl;
+	cout << "3) EXIT" << endl;
+
+	while (true)
+	{
+		switch (_getch())
+		{
+		case 49:
+			std::rotate(arr, arr + (size- number_of_feats), arr + size); // вправо
+			break;
+		case 50:
+			std::rotate(arr, arr + number_of_feats, arr + (size)); // влево
+			break;
+		case 51:
+			return;
+			break;
+		default:
+			continue;
+		}
+		break;
+	}
 }
 
