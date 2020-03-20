@@ -17,7 +17,6 @@ void bubble_sort(int* arr, int size, bool parametr_sort,bool graphic_sorting) {
 				if (graphic_sorting)
 				{
 					show_sortings(arr, size, j, j + 1);
-					count++;
 				}			
 			}
 		}
