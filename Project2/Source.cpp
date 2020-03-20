@@ -6,7 +6,7 @@ int main()
 {
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(handle, 7);
-	const int size_arr=15;
+	const int size_arr=20;
 	int numbers[size_arr];	
 	for (;;)
 	{
