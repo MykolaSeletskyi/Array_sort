@@ -53,8 +53,5 @@ int main()
 			break;
 		}
 	}
-	random_array(numbers, size_arr);
-	sort_array(numbers, size_arr);
-
     return 0;
 }
