@@ -1,26 +1,26 @@
 #include "array processing.h"
 #include "sortings.h"
-#include<conio.h>
 void random_array(int* arr, int size) {
 	srand(time(0));
+	system("cls");
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = (rand() % 100);
+		arr[i] = (rand() % 50);
 	}
+	cout << "Array is full" << endl;
+	system("pause");
 }
 void show_array(int* arr, int size) {
+	system("cls");
 	for (int i = 0; i < size; i++)
 	{
-		if (i % 10 == 0)
-		{
-			cout << endl;
-		}
-		cout << arr[i] << " ";
+		cout << arr[i] << endl;
 	}
-	cout << endl;
+	system("pause");
 }
 void element_search(int* arr, int size)
 {
+	system("cls");
 	int number = 0;
 	bool was_found = false;
 	cout << "Enter search number _ ";
@@ -36,16 +36,16 @@ void element_search(int* arr, int size)
 	if (!was_found)
 	{
 		cout << "NUMBER NOT FOUND" << endl;
-		Sleep(500);
 	}
+	system("pause");
 }
 void sort_array(int* arr, int size)
 {
 	system("cls");
 	bool parameter_sort=true;
 	bool graphic_sorting=true;
-	cout << "1) graphic sorting" << endl;
-	cout << "2) sorting" << endl;
+	cout << "1) Graphic sorting" << endl;
+	cout << "2) Sorting" << endl;
 	cout << "3) EXIT" << endl;
 	while (true)
 	{
@@ -89,9 +89,9 @@ void sort_array(int* arr, int size)
 	}
 	system("cls");
 	cout << "Type sorting " << endl;
-	cout << "1) inserts sorting" << endl;
-	cout << "2) bubble sorting" << endl;
-	cout << "3) selection sorting" << endl;
+	cout << "1) Inserts sorting" << endl;
+	cout << "2) Bubble sorting" << endl;
+	cout << "3) Selection sorting" << endl;
 	cout << "4) EXIT" << endl;
 	while (true)
 	{
@@ -114,8 +114,32 @@ void sort_array(int* arr, int size)
 		}
 		break;
 	}
-
-
-	//inserts_sort(arr, size, true);//true зростання false спадання
+	system("pause");
+}
+void average_array(int* arr, int size)
+{
+	system("cls");
+	int sum_evement_array = 0;
+	for (int i = 0; i < size; i++)
+	{
+		sum_evement_array += arr[i];
+	}
+	cout << "Average = " << sum_evement_array / size << endl;
+	system("pause");
+}
+void multiples_of_5(int* arr, int size)
+{
+	int count = 0;
+	system("cls");
+	int sum_evement_array = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i]%5==0)
+		{
+			count++;
+		}
+	}
+	cout << "Multiples of 5 = " << count << endl;
+	system("pause");
 }
 

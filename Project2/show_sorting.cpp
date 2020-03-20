@@ -16,7 +16,7 @@ void show_sortings(int* arr, int size,int index_a,int index_b)
 		{
 			SetConsoleTextAttribute(handle, 64);
 		}
-		for (int j = 0; j < arr[i]; j++)
+		for (int j = 0; j <= arr[i]; j++)
 		{
 			std::cout <<' ';
 		}
