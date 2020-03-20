@@ -1,6 +1,6 @@
 #include "sortings.h"
 #include "show_sorting.h"
-void bubble_sort(int* arr, int size, bool parametr_sort) {
+void bubble_sort(int* arr, int size, bool parametr_sort,bool graphic_sorting) {
 	int temp;
 	for (int i = 0; i < size - 1; i++)
 	{
@@ -11,13 +11,17 @@ void bubble_sort(int* arr, int size, bool parametr_sort) {
 				temp = arr[j + 1];
 				arr[j + 1] = arr[j];
 				arr[j] = temp;
-				show_sortings(arr, size, j, j + 1);
+				if (graphic_sorting)
+				{
+					show_sortings(arr, size, j, j + 1);
+				}
+				
 			}
 		}
 	}
 
 }
-void selection_sort(int* arr, int size, bool parametr_sort)
+void selection_sort(int* arr, int size, bool parametr_sort, bool graphic_sorting)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -29,12 +33,15 @@ void selection_sort(int* arr, int size, bool parametr_sort)
 				temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
-				show_sortings(arr, size, i, j);
+				if (graphic_sorting)
+				{
+					show_sortings(arr, size, i, j);
+				}
 			}
 		}
 	}
 }
-void inserts_sort(int* arr, int size, bool parametr_sort)
+void inserts_sort(int* arr, int size, bool parametr_sort, bool graphic_sorting)
 {
 	int temp;
 	int index_prev;
@@ -47,7 +54,10 @@ void inserts_sort(int* arr, int size, bool parametr_sort)
 			arr[index_prev + 1] = arr[index_prev];
 			arr[index_prev] = temp;
 			index_prev--;
-			show_sortings(arr, size, index_prev, index_prev+1);
+			if (graphic_sorting)
+			{
+				show_sortings(arr, size, index_prev, index_prev + 1);
+			}
 		}
 	}
 }
