@@ -174,4 +174,3 @@ void move_array(int* arr, int size)
 		break;
 	}
 }
-
